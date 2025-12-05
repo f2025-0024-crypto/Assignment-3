@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    char ch;
+
+    
+    cout << "Enter a single character: ";
+    cin >> ch;
+
+    // ASCII-based classification using nested if
+    if ((ch >= 65 && ch <= 90) || (ch >= 97 && ch <= 122)) {  
+        // Character is alphabet
+        if (ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U' ||
+            ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+            
+            // It's a vowel
+            if (ch >= 65 && ch <= 90)
+                cout << "Uppercase Vowel" << endl;
+            else
+                cout << "Lowercase Vowel" << endl;
+
+        } else {
+            // It's a consonant
+            if (ch >= 65 && ch <= 90)
+                cout << "Uppercase Consonant" << endl;
+            else
+                cout << "Lowercase Consonant" << endl;
+        }
+
+    } else {
+        cout << "Not an alphabet" << endl;
+    }
+
+    return 0;
+}
