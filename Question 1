@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int marks;
+    float attendance;
+    double income;
+
+    
+    cout << "Enter marks (out of 100): ";
+    cin >> marks;
+
+    cout << "Enter attendance percentage: ";
+    cin >> attendance;
+
+    cout << "Enter family income: ";
+    cin >> income;
+
+    // Scholarship Decision using nested if
+    if (marks >= 85) {
+        if (attendance >= 80) {
+            cout << "Result: Full Scholarship" << endl;
+        } else {
+            cout << "Result: No Scholarship" << endl;
+        }
+    } 
+    else {
+        if (marks >= 70) {
+            cout << "Result: Partial Scholarship" << endl;
+        } else {
+            cout << "Result: No Scholarship" << endl;
+        }
+    }
+
+    return 0;
+}
