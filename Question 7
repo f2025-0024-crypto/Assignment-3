@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int hour24;
+    int hour12;
+    string period;
+
+    cout << "Enter time in 24-hour format (0–23): ";
+    cin >> hour24;
+
+    // Validate input
+    if (hour24 < 0 || hour24 > 23) {
+        cout << "Invalid hour! Please enter a value between 0 and 23." << endl;
+        return 0;
+    }
+
+    // Conversion
+    if (hour24 == 0) {
+        hour12 = 12;
+        period = "AM";
+    }
+    else if (hour24 == 12) {
+        hour12 = 12;
+        period = "PM";
+    }
+    else if (hour24 > 12) {
+        hour12 = hour24 - 12;
+        period = "PM";
+    }
+    else {
+        hour12 = hour24;
+        period = "AM";
+    }
+
+    // Display result
+    cout << "12-hour format: " << hour12 << " " << period << endl;
+
+    return 0;
+}
