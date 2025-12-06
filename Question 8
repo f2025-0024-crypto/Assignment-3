@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a,b,c;
+    int result=0;
+    cout<<"Enter 1st integer: ";
+    cin>>a;
+    cout<<"\nEnter 2nd integer: ";
+    cin>>b;
+    cout<<"\nEnter 3rd integer: ";
+    cin>>c;
+    result=a*a+b*b;
+    //Check if they form pythagorean triplet
+    if(result==c*c){
+        cout<<"The numbers form pythagorean triplet"<<endl;
+    }
+    else{
+        cout<<"The numbers don't form pythagorean triplet"<<endl;
+    }
+    return 0;
+}
