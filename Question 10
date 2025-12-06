@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+int main(){
+    float marks;
+    cout<<"Enter your marks(0-100): ";
+    cin>>marks;
+    if(marks>100){
+        cout<<"Please enter valid marks";
+        return 0;
+    }
+    //Grading
+    if(marks>=90){
+        cout<<"Grade: A+";
+    }
+        else if(marks>=80){
+            cout<<"Grade: A";
+        }
+        else if(marks>=70){
+            cout<<"Grade: B";
+        }
+        else if(marks>=60){
+            cout<<"Grade: C";
+        }
+        else{
+            cout<<"Fail";
+        }
+        //Status
+        if(marks>=60){
+            cout<<"\nStatus: Pass";
+        }
+        else{
+            cout<<"\nStatus: Fail"<<endl;
+        }
+        return 0;
+    
+}
