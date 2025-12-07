@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Perfect numbers between 1 and 1000 are:\n";
+
+    for (int num = 1; num <= 1000; num++) {
+        int sum = 0;
+
+        // Find divisors of num
+        for (int i = 1; i <= num / 2; i++) {
+            if (num % i == 0) {
+                sum += i;
+            }
+        }
+
+        // Check if perfect number
+        if (sum == num) {
+            cout << num << " ";
+        }
+    }
+
+    return 0;
+}
