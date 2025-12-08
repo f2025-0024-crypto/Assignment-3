@@ -1,0 +1,37 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    long long n;
+    cout << "Enter a decimal integer: ";
+    if (!(cin >> n)) {
+        cerr << "Invalid input\n";
+        return 1;
+    }
+
+    if (n == 0) {
+        cout << "Binary: 0\n";
+        return 0;
+    }
+
+    bool negative = (n < 0);
+    long long value = (negative ? -n : n);
+
+    vector<int> bits;
+    while (value > 0) {
+        int rem = value % 2;
+        bits.push_back(rem);
+        value = value / 2;
+    }
+
+    if (negative) cout << "-";
+
+    cout << "Binary: ";
+    for (int i = bits.size() - 1; i >= 0; --i) {
+        cout << bits[i];
+    }
+    cout << endl;
+
+    return 0;
+}
