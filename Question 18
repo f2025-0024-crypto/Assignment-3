@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b;
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+
+    // Make sure numbers are positive
+    int x = (a < 0) ? -a : a;
+    int y = (b < 0) ? -b : b;
+
+    // ----------- GCD using loops -----------
+    int n1 = x, n2 = y;
+    while (n1 != n2) {
+        if (n1 > n2)
+            n1 = n1 - n2;
+        else
+            n2 = n2 - n1;
+    }
+    int gcd = n1;   // or n2 (both are equal)
+
+    // ----------- LCM using loops -----------
+    int lcm = (x > y) ? x : y;  // start from max number
+    while (true) {
+        if (lcm % x == 0 && lcm % y == 0)
+            break;
+        lcm++;
+    }
+
+    cout << "GCD = " << gcd << endl;
+    cout << "LCM = " << lcm << endl;
+
+    return 0;
+}
