@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int type;
+    cout << "Hospital Patient Priority System\n";
+    cout << "1. Emergency\n";
+    cout << "2. Serious\n";
+    cout << "3. Normal\n";
+    cout << "Enter patient type: ";
+    cin >> type;
+
+    switch (type) {
+        case 1:
+            cout << "Waiting Time: 0 minutes (Immediate treatment)" << endl;
+            break;
+
+        case 2:
+            cout << "Waiting Time: 15 minutes" << endl;
+            break;
+
+        case 3:
+            cout << "Waiting Time: 30–60 minutes" << endl;
+            break;
+
+        default:
+            cout << "Invalid patient type!" << endl;
+    }
+
+    return 0;
+}
