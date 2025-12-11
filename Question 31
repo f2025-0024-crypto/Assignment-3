@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int findLCM(int a, int b) {
+    int lcm = (a > b) ? a : b;
+
+    while (true) {
+        if (lcm % a == 0 && lcm % b == 0)
+            return lcm;
+        lcm++;
+    }
+}
+
+int main() {
+    int x, y;
+
+    cout << "Enter two numbers: ";
+    cin >> x >> y;
+
+    cout << "LCM = " << findLCM(x, y);
+}
