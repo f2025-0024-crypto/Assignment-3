@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+int main(){
+    const int sugar=150;
+    const int flour=120;
+    const int rice=200;
+    float quantityofs,quantityoff,quantityofr;
+    float totalsugar,totalflour,totalrice,totalbill;
+    cout<<"Enter quantity of sugar in kg: ";
+    cin>>quantityofs;
+    totalsugar=sugar*quantityofs;
+    cout<<"Enter quantity of flour in kg: ";
+    cin>>quantityoff;
+    totalflour=flour*quantityoff;
+    cout<<"Enter quantity of rice in kg: ";
+    cin>>quantityofr;
+    totalrice=rice*quantityofr;
+    totalbill=totalsugar+totalflour+totalrice;
+    if(totalbill>5000){
+        totalbill=totalbill*0.95;
+    }
+    cout<<"Full bill: Rs. "<<totalbill;
+    return 0;
+}
