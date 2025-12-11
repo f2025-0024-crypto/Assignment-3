@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+double compoundAmountFormula(double P, double r, int t) {
+    double amount = P;
+    double factor = 1 + r / 100.0;
+    for (int i = 0; i < t; i++) {
+        amount *= factor;
+    }
+    return amount;
+}
+
+double compoundAmountLoop(double P, double r, int t) {
+    double amount = P;
+    for (int i = 1; i <= t; i++) {
+        amount += amount * r / 100.0;
+    }
+    return amount;
+}
+
+int main() {
+    double P, r;
+    int t;
+
+    cout << "Enter Principal: ";
+    cin >> P;
+    cout << "Enter Rate (%): ";
+    cin >> r;
+    cout << "Enter Time (years): ";
+    cin >> t;
+
+    cout << "Amount (Formula Method) = " << compoundAmountFormula(P, r, t) << endl;
+    cout << "Amount (Loop Method)    = " << compoundAmountLoop(P, r, t) << endl;
+
+    return 0;
+}
