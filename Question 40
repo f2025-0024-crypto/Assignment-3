@@ -16,7 +16,7 @@ int main() {
             break;
 
         case 2:
-            cout << "Waiting Time: 15 minutes" << endl;
+            cout << "Waiting Time: 10 minutes" << endl;
             break;
 
         case 3:
