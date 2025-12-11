@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+bool isSumEqualProduct(int num) {
+    int sum = 0;
+    int product = 1;
+
+    int temp = num;
+
+    while (temp > 0) {
+        int digit = temp % 10;
+        sum += digit;
+        product *= digit;
+        temp /= 10;
+    }
+
+    return (sum == product);
+}
+
+int main() {
+    int n;
+    cout << "Enter a number: ";
+    cin >> n;
+
+    if (isSumEqualProduct(n))
+        cout << "YES — Sum equals Product.";
+    else
+        cout << "NO — Sum does NOT equal Product.";
+
+    return 0;
+}
