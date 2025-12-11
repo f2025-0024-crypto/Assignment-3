@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int type;
+    char late;
+    double fee;
+
+    cout << "Student Type:\n";
+    cout << "1. Regular (50,000)\n";
+    cout << "2. Self-Finance (85,000)\n";
+    cout << "3. Sports (30,000)\n\n";
+
+    cout << "Enter student type (1-3): ";
+    cin >> type;
+
+    // Determine base fee using switch
+    switch (type) {
+        case 1:
+            fee = 50000;
+            break;
+        case 2:
+            fee = 85000;
+            break;
+        case 3:
+            fee = 30000;
+            break;
+        default:
+            cout << "Invalid student type!";
+            return 0;
+    }
+
+    cout << "Is payment late? (Y/N): ";
+    cin >> late;
+
+    // Add 10% fine if late
+    if (late == 'Y' || late == 'y') {
+        fee += fee * 0.10;   // 10% fine
+    }
+
+    cout << "\nTotal Payable Fee = " << fee << endl;
+
+    return 0;
+}
