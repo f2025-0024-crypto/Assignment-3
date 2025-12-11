@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int present;
+    int totalDays = 30;
+
+    cout << "Enter number of present days (out of 30): ";
+    cin >> present;
+
+    if (present >= 27) {
+        cout << "Excellent";
+    }
+    else if (present >= 20) {
+        cout << "Satisfactory";
+    }
+    else {
+        cout << "Warning";
+    }
+
+    return 0;
+}
