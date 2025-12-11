@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+bool isAutomorphic(int num) {
+    int square = num * num;
+    int temp = num;
+
+    while (temp > 0) {
+        if ((square % 10) != (temp % 10))
+            return false;
+        
+        square /= 10;
+        temp /= 10;
+    }
+    return true;
+}
+
+int main() {
+    int n;
+    cout << "Enter number: ";
+    cin >> n;
+
+    if (isAutomorphic(n))
+        cout << n << " is an Automorphic number.";
+    else
+        cout << n << " is NOT an Automorphic number.";
+
+    return 0;
+}
