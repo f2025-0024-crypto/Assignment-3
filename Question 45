@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int choice;
+    int totalFine = 0;
+
+    cout << "=== Traffic Fine Management System ===\n";
+
+    do {
+        cout << "\nViolations:\n";
+        cout << "1. Signal break – Rs. 2000\n";
+        cout << "2. Speeding     – Rs. 1500\n";
+        cout << "3. No helmet    – Rs. 1000\n";
+        cout << "4. Exit & Show Total Fine\n";
+
+        cout << "Enter violation: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                totalFine += 2000;
+                cout << "Fine added: 2000\n";
+                break;
+
+            case 2:
+                totalFine += 1500;
+                cout << "Fine added: 1500\n";
+                break;
+
+            case 3:
+                totalFine += 1000;
+                cout << "Fine added: 1000\n";
+                break;
+
+            case 4:
+                cout << "\nCalculating total fines...\n";
+                break;
+
+            default:
+                cout << "Invalid option! Try again.\n";
+        }
+
+    } while (choice != 4);
+
+    cout << "-------------------------------\n";
+    cout << "Total Fine: Rs. " << totalFine << endl;
+    
+
+    return 0;
+}
