@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int status;
+
+    cout << "Online Order Tracking System\n";
+    cout << "1. Packed\n";
+    cout << "2. Shipped\n";
+    cout << "3. Out for Delivery\n";
+    cout << "4. Delivered\n";
+
+    cout << "Enter order status (1-4): ";
+    cin >> status;
+
+    switch (status) {
+        case 1:
+            cout << "Your order is Packed." << endl;
+            break;
+
+        case 2:
+            cout << "Your order has been Shipped." << endl;
+            break;
+
+        case 3:
+            cout << "Your order is Out for Delivery." << endl;
+            break;
+
+        case 4:
+            cout << "Your order has been Delivered." << endl;
+            break;
+
+        default:
+            cout << "Invalid status entered!" << endl;
+    }
+
+    return 0;
+}
