@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int choice;
+    int bill = 0;
+
+    cout << "=== Fast Food Ordering System ===\n";
+
+    do {
+        cout << "\nMenu:\n";
+        cout << "1. Zinger  – Rs. 450\n";
+        cout << "2. Burger  – Rs. 300\n";
+        cout << "3. Fries   – Rs. 150\n";
+        cout << "4. Exit & Show Bill\n";
+
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                bill += 450;
+                cout << "Zinger added!" << endl;
+                break;
+
+            case 2:
+                bill += 300;
+                cout << "Burger added!" << endl;
+                break;
+
+            case 3:
+                bill += 150;
+                cout << "Fries added!" << endl;
+                break;
+
+            case 4:
+                cout << "\nGenerating final bill...\n";
+                break;
+
+            default:
+                cout << "Invalid choice! Please try again.\n";
+        }
+
+    } while (choice != 4);
+
+    cout << "-----------------------------\n";
+    cout << "Final Bill: Rs. " << bill << endl;
+    
+
+    return 0;
+}
