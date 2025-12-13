@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int choice;
+    int totalBill = 0;
+
+    cout << "=== Mobile Package Subscription System ===\n";
+
+    do {
+        cout << "\nAvailable Packages:\n";
+        cout << "1. Call Package     – Rs. 500\n";
+        cout << "2. SMS Package      – Rs. 200\n";
+        cout << "3. Internet Package – Rs. 800\n";
+        cout << "4. Exit & Show Bill\n";
+
+        cout << "Select a package: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                totalBill += 500;
+                cout << "Call Package added.\n";
+                break;
+
+            case 2:
+                totalBill += 200;
+                cout << "SMS Package added.\n";
+                break;
+
+            case 3:
+                totalBill += 800;
+                cout << "Internet Package added.\n";
+                break;
+
+            case 4:
+                cout << "\nGenerating monthly bill...\n";
+                break;
+
+            default:
+                cout << "Invalid choice! Try again.\n";
+        }
+
+    } while (choice != 4);
+
+    cout << "-----------------------------\n";
+    cout << "Total Monthly Bill: Rs. " << totalBill << endl;
+    cout << "-----------------------------\n";
+
+    return 0;
+}
