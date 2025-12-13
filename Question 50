@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+void feeStatus(double totalFee, double paidAmount) {
+    double remaining = totalFee - paidAmount;
+
+    cout << "Total Fee: " << totalFee << endl;
+    cout << "Paid Amount: " << paidAmount << endl;
+
+    if (remaining <= 0) {
+        cout << "Remaining Balance: 0" << endl;
+        cout << "Fee Cleared" << endl;
+    } else {
+        cout << "Remaining Balance: " << remaining << endl;
+        cout << "Outstanding Balance" << endl;
+    }
+}
+
+int main() {
+    double totalFee, paidAmount;
+
+    cout << "Enter total semester fee: ";
+    cin >> totalFee;
+    cout << "Enter amount paid: ";
+    cin >> paidAmount;
+
+    feeStatus(totalFee, paidAmount);
+
+    return 0;
+}
