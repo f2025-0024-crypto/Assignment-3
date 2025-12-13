@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int choice;
+    int singleRooms = 10;
+    int sharedRooms = 20;
+
+    cout << "=== Student Hostel Room Allocation System ===\n";
+
+    while (singleRooms > 0 || sharedRooms > 0) {
+        cout << "\nAvailable Rooms:\n";
+        cout << "Single Rooms : " << singleRooms << endl;
+        cout << "Shared Rooms : " << sharedRooms << endl;
+
+        cout << "\nRoom Types:\n";
+        cout << "1. Single Room\n";
+        cout << "2. Shared Room\n";
+        cout << "3. Exit\n";
+
+        cout << "Select room type: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                if (singleRooms > 0) {
+                    singleRooms--;
+                    cout << "Single room allocated successfully!\n";
+                } else {
+                    cout << "No single rooms available!\n";
+                }
+                break;
+
+            case 2:
+                if (sharedRooms > 0) {
+                    sharedRooms--;
+                    cout << "Shared room allocated successfully!\n";
+                } else {
+                    cout << "No shared rooms available!\n";
+                }
+                break;
+
+            case 3:
+                cout << "Exiting allocation system.\n";
+                return 0;
+
+            default:
+                cout << "Invalid choice! Try again.\n";
+        }
+
+        if (singleRooms == 0 && sharedRooms == 0) {
+            cout << "\nAll hostel rooms are FULL.\n";
+            break;
+        }
+    }
+
+    return 0;
+}
