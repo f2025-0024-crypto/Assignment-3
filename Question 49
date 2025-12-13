@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int type,hours,totalbill;
+    cout<<"Vehicle types:\n";
+    cout<<"\n1.Bike= 30/hour\n";
+    cout<<"\n2.Car=70/hour\n";
+    cout<<"\n3.Bus=150/hour\n";
+    cout<<"Enter parking hours: ";
+    cin>>hours;
+    cout<<"Enter your vehicle type: ";
+    cin>>type;
+    switch(type){
+        case 1:
+        totalbill=30*hours;
+        cout<<"Your parking bill:Rs. "<<totalbill;
+        break;
+        case 2:
+        totalbill=70*hours;
+        cout<<"Your parking bill:Rs. "<<totalbill;
+        break;
+        case 3:
+        totalbill=150*hours;
+        cout<<"Your parking bill:Rs. "<<totalbill;
+        break;
+        default: cout<<"Invalid vehicle type";
+        break;
+    }
+    return 0;
+}
